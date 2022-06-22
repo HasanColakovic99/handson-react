@@ -1,0 +1,84 @@
+@import '../../theme.scss';
+
+.Header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 32px 0px;
+
+    &.Header-Secondary {
+        background-color: $colorTextPrimary;
+        position: initial;
+    }
+
+    &-Hamburger {
+        width: 30px;
+        height: auto;
+
+        path {
+            fill: $colorBgPrimary;
+        }
+
+        @media ($desktop) {
+            display: none;
+        }
+    }
+
+    &-Iner {
+        width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media ($desktop) {
+            width: 960px;
+            margin: 0 auto;
+            padding: 32px 0;
+        }
+
+        @media ($desktopLarge) {
+            width: 1260px;
+        }
+    }
+
+    &-Nav {
+        display: none;
+
+        @media ($desktop) {
+            display: block;
+        }
+    }
+
+    &-Logo {
+        width: 140px;
+    }
+
+    &-NavLinkActive {
+        color: $colorBgPrimary;
+        letter-spacing: 1px;
+        margin-right: 48px;
+        border-bottom: 1px solid $colorBgPrimary;
+    }
+
+    &-NavLink {
+        color: $colorBgPrimary;
+        letter-spacing: 1px;
+        margin-right: 48px;
+
+        &:hover {
+            border-bottom: 1px solid $colorBgPrimary;
+        }
+    }
+
+    &-NavButton {
+        margin-right: 24px;
+        display: inline-block;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
