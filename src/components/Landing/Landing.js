@@ -1,12 +1,9 @@
 import "./Landing.scss";
 import Button from "../Button/Button";
 import LandingImg from "../../assets/images/landing.jpg";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
-
-    const navigate = useNavigate();
-
     return (
         <div className="Landing">
             <img className="Landing-Img" src={LandingImg} alt="Landing image" />

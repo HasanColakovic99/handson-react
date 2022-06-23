@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import CourseCard from "../../components/CourseCard/CourseCard";
-import Grid from "../../components/Grid/Grid";
+import {Grid} from "../../lib/style/generalStyles";
 
 import LectureImg1 from "../../assets/images/lecture-1.jpg";
 import LectureImg2 from "../../assets/images/lecture-2.jpg";

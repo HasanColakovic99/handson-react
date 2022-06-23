@@ -1,5 +1,4 @@
 import "./Button.scss";
-import { useNavigate } from "react-router-dom";
 
 const Button = ({
     click,

@@ -39,6 +39,11 @@
 
     &_outline {
         border: 1px solid $colorPrimary;
+
+        &:hover {
+            background: $colorPrimary;
+            color: $colorSecondary;
+        }
     }
 
     &_heading {
