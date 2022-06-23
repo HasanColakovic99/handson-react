@@ -16,10 +16,10 @@ const Header = ({
                 <Nav>
                     <HeaderNavLink to="/courses">Courses</HeaderNavLink>
                     <ButtonLink to="/">
-                        <Button modifiers={['nav']}>Sign In</Button>
+                        <Button isNav={true}>Sign In</Button>
                     </ButtonLink>
                     <ButtonLink to="/">
-                        <Button modifiers={['nav', 'secondary']}>Register</Button>
+                        <Button isNav={true} isSecondary={true}>Register</Button>
                     </ButtonLink>
                 </Nav>
             </HeaderInner>

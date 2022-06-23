@@ -4,35 +4,22 @@ import { useNavigate } from "react-router-dom";
 import {Section as SectionWrapper, Testimonials, SectionInner, ActionText, Heading, Title} from "./SectionStyle";
 
 const Section = ({
-    modifiers,
     actionText,
     title,
     buttonText,
     isHeadingVisible = true,
+    isTestimonial = false,
     children
 }) => {
-    const modifierClasses = {
-        testimonials: 'Section_testimonials'
-    }
-
     let navigate = useNavigate();
-
-    let sectionClass = 'Section';
-
-    if (modifiers) {
-        modifiers.map(modifier => {
-            sectionClass += ' ' + modifierClasses[modifier];
-        });
-    }
-
     return (
-        <SectionWrapper>
+        <SectionWrapper isTestimonial={isTestimonial}>
             <SectionInner>
                 {actionText && <ActionText>{actionText}</ActionText>}
                 {isHeadingVisible && 
                 <Heading>
                     {title && <Title>{title}</Title>}
-                    {buttonText && <Button click={() => navigate(-1)} modifiers={['heading', 'outline']}>{buttonText}</Button>}    
+                    {buttonText && <Button isHeading={true} isOutline={true}>{buttonText}</Button>}    
                 </Heading>}
                 {children}
             </SectionInner>

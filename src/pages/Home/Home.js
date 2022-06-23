@@ -5,7 +5,7 @@ import Landing from '../../components/Landing/Landing';
 import Section from '../../components/Section/Section';
 import Testimonial from '../../components/Testimonial/Testimonial';
 import Button from "../../components/Button/Button";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {Grid, Main} from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/mock/courses";
 
@@ -29,7 +29,7 @@ const Home = () => {
                     <Landing />
                 </section>
 
-                <Section actionText={'Learn something new'} title={'Open new possibilites'} buttonText={'More courses'}>
+                <Section actionText={'Learn something new'} title={'Open new possibilites'} buttonText={<Link to="/courses"><Button isOutline={true}>More courses</Button></Link>}>
                     {courses && (
                     <Grid>
                         {courses.map(
@@ -43,7 +43,7 @@ const Home = () => {
                     )}
                 </Section>
 
-                <Section modifiers={['testimonials']} isHeadingVisible={false}>
+                <Section isTestimonial={true} isHeadingVisible={false}>
                     <Testimonial />
                 </Section>
             </Main>

@@ -7,10 +7,10 @@ export const Section = styled.section`
     @media (${breakpoints.desktop}) {
         padding: 120px 0;
     }
-`;
 
-export const Testimonials = styled.div`
-    background-color: ${colors.bgSecondary};
+    ${props => props.isTestimonial && `
+        background-color: ${colors.bgSecondary};
+    `}
 `;
 
 export const SectionInner = styled.div`

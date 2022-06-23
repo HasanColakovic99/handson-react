@@ -18,7 +18,7 @@ const Landing = () => {
                         with
                         knowledge-based lessons from IT practice.</Subtitle>
                     <Link to="/courses">
-                        <Button modifiers={['landing']}>Explore courses</Button>
+                        <Button isLanding={true}>Explore courses</Button>
                     </Link>
                 </ContentInner>
             </Content>
