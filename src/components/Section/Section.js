@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button';
-import './Section.scss';
 import { useNavigate } from "react-router-dom";
+import {Section as SectionWrapper, Testimonials, SectionInner, ActionText, Heading, Title} from "./SectionStyle";
 
 const Section = ({
     modifiers,
@@ -26,16 +26,17 @@ const Section = ({
     }
 
     return (
-        <section className={sectionClass}>
-            <div className="Section-Inner">
-                {actionText && <span className="Section-ActionText">{actionText}</span>}
-                {isHeadingVisible && <div className="Section-Heading">
-                    {title && <h2 className="Section-Title">{title}</h2>}
-                    {buttonText && <Button click={() => navigate(-1)} modifiers={['heading', 'outline']}>{buttonText}</Button>}
-                </div>}
+        <SectionWrapper>
+            <SectionInner>
+                {actionText && <ActionText>{actionText}</ActionText>}
+                {isHeadingVisible && 
+                <Heading>
+                    {title && <Title>{title}</Title>}
+                    {buttonText && <Button click={() => navigate(-1)} modifiers={['heading', 'outline']}>{buttonText}</Button>}    
+                </Heading>}
                 {children}
-            </div>
-        </section>
+            </SectionInner>
+        </SectionWrapper>
     );
 }
 

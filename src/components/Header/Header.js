@@ -1,8 +1,5 @@
-import React from 'react';
-import './Header.scss';
 import LogoImg from '../../assets/images/logo.svg';
 import Button from '../Button/Button';
-import { Link, NavLink } from "react-router-dom";
 import {Header as HeaderWrapper, HeaderInner, LogoLink, LogoImg as LogoElement, Hamburger, Nav, HeaderNavLink, ButtonLink} from "./HeaderStyle";
 
 const Header = ({
