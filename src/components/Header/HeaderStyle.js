@@ -48,6 +48,7 @@ export const LogoImg = styled.img`
 export const Hamburger = styled(HamburgerIcon)`
     width: 30px;
     height: auto;
+    z-index: 2;
 
     path {
         fill: ${colors.bgPrimary};
