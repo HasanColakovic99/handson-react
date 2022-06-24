@@ -5,10 +5,9 @@ export const SearchBar = styled.input`
     padding: 0px 15px;
     margin-bottom: 40px;
 
-    @media (${breakpoints.tabletSmall}) {
+    @media (${breakpoints.mobileLarge}) {
         max-width: 400px;
         padding: 0;
-        margin: 0 auto;
     }
 
     @media (${breakpoints.tablet}) {
@@ -25,6 +24,5 @@ export const SearchBar = styled.input`
 
     @media (${breakpoints.desktop}) {
         font-size: 16px;
-        margin-bottom: 40px;
     }
 `;

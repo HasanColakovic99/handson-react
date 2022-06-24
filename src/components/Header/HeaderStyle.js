@@ -74,6 +74,10 @@ export const HeaderNavLink = styled(NavLink)`
     &:hover {
         border-bottom: 1px solid ${colors.bgPrimary};
     }
+
+    ${props => props.isActive && `
+        border-bottom: 1px solid ${colors.bgPrimary};
+    `}
 `;
 
 export const ButtonLink = styled(Link)`

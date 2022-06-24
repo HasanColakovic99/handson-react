@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '../Button/Button';
-import { useNavigate } from "react-router-dom";
-import {Section as SectionWrapper, Testimonials, SectionInner, ActionText, Heading, Title} from "./SectionStyle";
+import {Section as SectionWrapper, SectionInner, ActionText, Heading, Title} from "./SectionStyle";
 
 const Section = ({
     actionText,
@@ -11,7 +10,6 @@ const Section = ({
     isTestimonial = false,
     children
 }) => {
-    let navigate = useNavigate();
     return (
         <SectionWrapper isTestimonial={isTestimonial}>
             <SectionInner>

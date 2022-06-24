@@ -3,7 +3,8 @@ import Button from '../Button/Button';
 import {Header as HeaderWrapper, HeaderInner, LogoLink, LogoImg as LogoElement, Hamburger, Nav, HeaderNavLink, ButtonLink} from "./HeaderStyle";
 
 const Header = ({
-    isSecondary
+    isSecondary,
+    isActive
 }) => {
 
     return (
@@ -14,7 +15,7 @@ const Header = ({
                 </LogoLink>
                 <Hamburger />
                 <Nav>
-                    <HeaderNavLink to="/courses">Courses</HeaderNavLink>
+                    <HeaderNavLink to="/courses" isActive={isActive}>Courses</HeaderNavLink>
                     <ButtonLink to="/">
                         <Button isNav={true}>Sign In</Button>
                     </ButtonLink>

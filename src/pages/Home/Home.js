@@ -5,19 +5,19 @@ import Landing from '../../components/Landing/Landing';
 import Section from '../../components/Section/Section';
 import Testimonial from '../../components/Testimonial/Testimonial';
 import Button from "../../components/Button/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {Grid, Main} from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/mock/courses";
+import Loader from "../../components/Loader/Loader";
 
 const Home = () => {
-
-    const navigate = useNavigate();
-
     const [courses, setCourses] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         setTimeout(() => {
             setCourses(coursesMock);
+            setIsLoading(false);
         }, 1000)
     }, []);
 
@@ -30,7 +30,7 @@ const Home = () => {
                 </section>
 
                 <Section actionText={'Learn something new'} title={'Open new possibilites'} buttonText={<Link to="/courses"><Button isOutline={true}>More courses</Button></Link>}>
-                    {courses && (
+                    {isLoading === true ? <Loader /> : (
                     <Grid>
                         {courses.map(
                             (course, index) => (
@@ -42,7 +42,6 @@ const Home = () => {
                     </Grid>
                     )}
                 </Section>
-
                 <Section isTestimonial={true} isHeadingVisible={false}>
                     <Testimonial />
                 </Section>
