@@ -7,10 +7,11 @@ const Button = ({
     isLanding,
     isHeading,
     isOutline,
+    isForm,
     children,
 }) => {
     return (
-        <ButtonWrapper onClick={click} isSecondary={isSecondary} isNav={isNav} isLanding={isLanding} isHeading={isHeading} isOutline={isOutline}>{children}</ButtonWrapper>
+        <ButtonWrapper onClick={click} isForm={isForm} isSecondary={isSecondary} isNav={isNav} isLanding={isLanding} isHeading={isHeading} isOutline={isOutline}>{children}</ButtonWrapper>
     );
 }
 

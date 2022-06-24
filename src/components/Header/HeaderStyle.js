@@ -8,8 +8,8 @@ export const Header = styled.header`
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
-    padding: 32px 0px;
+    z-index: 2;
+    padding: 24px;
 
     ${props => props.isSecondary && `
         background-color: ${colors.textPrimary};
@@ -22,7 +22,6 @@ export const Header = styled.header`
 `;
 
 export const HeaderInner = styled.div`
-    width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -48,7 +47,6 @@ export const LogoImg = styled.img`
 export const Hamburger = styled(HamburgerIcon)`
     width: 30px;
     height: auto;
-    z-index: 2;
 
     path {
         fill: ${colors.bgPrimary};

@@ -1,4 +1,5 @@
 import LogoImg from '../../assets/images/logo.svg';
+import LectureImg from "../../assets/images/lecture-1.jpg";
 import Button from '../Button/Button';
 import {Header as HeaderWrapper, HeaderInner, LogoLink, LogoImg as LogoElement, Hamburger, Nav, HeaderNavLink, ButtonLink} from "./HeaderStyle";
 
@@ -16,10 +17,10 @@ const Header = ({
                 <Hamburger />
                 <Nav>
                     <HeaderNavLink to="/courses" isActive={isActive}>Courses</HeaderNavLink>
-                    <ButtonLink to="/">
+                    <ButtonLink to="/sign-in">
                         <Button isNav={true}>Sign In</Button>
                     </ButtonLink>
-                    <ButtonLink to="/">
+                    <ButtonLink to="/register">
                         <Button isNav={true} isSecondary={true}>Register</Button>
                     </ButtonLink>
                 </Nav>

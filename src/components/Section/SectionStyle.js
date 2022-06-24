@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {colors, breakpoints} from "../../lib/style/theme";
 
 export const Section = styled.section`
@@ -41,7 +41,7 @@ export const Heading = styled.div`
     }
 `;
 
-export const Title = styled.h2`
+const Title = css`
     color: ${colors.textPrimary};
     font-size: 26px;
     font-weight: 500;
@@ -55,5 +55,23 @@ export const Title = styled.h2`
     @media (${breakpoints.desktop}) {
         font-size: 36px;
     }
+`;
+
+export const Titleh1 = styled.h1`
+    ${Title};
+
+    ${props => props.isCentered && `
+        width: 100%;
+        text-align: center;
+    `}
+`;
+
+export const Titleh2 = styled.h2`
+    ${Title};
+
+    ${props => props.isCentered && `
+        width: 100%;
+        text-align: center;
+    `}
 `;
 
