@@ -8,7 +8,7 @@ const Button = ({
     isHeading,
     isOutline,
     isForm,
-    children,
+    children
 }) => {
     return (
         <ButtonWrapper onClick={click} isForm={isForm} isSecondary={isSecondary} isNav={isNav} isLanding={isLanding} isHeading={isHeading} isOutline={isOutline}>{children}</ButtonWrapper>

@@ -21,12 +21,11 @@ const Courses = () => {
         courses && setCourse(...courses.filter(course => course.id === parseInt(id)));
     }, [courses, id])
 
-
     return (
         <>
             <Header isSecondary={true} />
             {course && 
-                <Section actionText={course.subtitle} title={course.title} buttonText={"Back"}>
+                <Section actionText={course.subtitle} title={course.title} buttonText={'Back'}>
                     <SingleCourse imgSrc={course.imgSrc} imgAlt={course.imgAlt} text={course.text}></SingleCourse>
                 </Section>
             }

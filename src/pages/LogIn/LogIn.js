@@ -10,7 +10,7 @@ const LogIn = () => {
         <>
             <Header isSecondary/>
 
-            <Section title={"LogIn"} isMainSection isCentered>
+            <Section title={"SignIn"} isMainSection isCentered>
                 <Formik initialValues={{
                     email: "",
                     password: "",
@@ -42,7 +42,7 @@ const LogIn = () => {
                                 <ErrorMessage component={"div"} name="password"/>
                             </FormRow>
                             <FormRow>
-                                <Button isForm isOutline disabled={formik.isSubmitting}>{formik.isSubmitting ? "Processing..." : "LogIn"}</Button>
+                                <Button isForm isOutline disabled={formik.isSubmitting}>{formik.isSubmitting ? "Processing..." : "SignIn"}</Button>
                             </FormRow>
                         </Form>
                     )}
