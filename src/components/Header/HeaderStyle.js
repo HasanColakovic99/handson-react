@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {NavLink, Link} from "react-router-dom";
 import {colors, breakpoints} from "../../lib/style/theme";
 import {ReactComponent as HamburgerIcon} from "../../assets/images/icon-hamburger.svg";
+import {ReactComponent as ClosingHamburgerIcon} from "../../assets/images/close.svg";
 
 export const Header = styled.header`
     position: absolute;
@@ -9,7 +10,7 @@ export const Header = styled.header`
     left: 0;
     width: 100%;
     z-index: 1;
-    padding: 32px 0px;
+    padding: 24px;
 
     ${props => props.isSecondary && `
         background-color: ${colors.textPrimary};
@@ -22,7 +23,6 @@ export const Header = styled.header`
 `;
 
 export const HeaderInner = styled.div`
-    width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -48,6 +48,21 @@ export const LogoImg = styled.img`
 export const Hamburger = styled(HamburgerIcon)`
     width: 30px;
     height: auto;
+    z-index: 3;
+
+    path {
+        fill: ${colors.bgPrimary};
+    }
+
+    @media (${breakpoints.desktop}) {
+        display: none;
+    }
+`;
+
+export const ClosingHamburger = styled(ClosingHamburgerIcon)`
+    width: 30px;
+    height: auto;
+    z-index: 5;
 
     path {
         fill: ${colors.bgPrimary};

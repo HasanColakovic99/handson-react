@@ -5,8 +5,17 @@ export const SearchBar = styled.input`
     padding: 0px 15px;
     margin-bottom: 40px;
 
+    @media (max-width: 375px) {
+        max-width: 400px;
+        border-radius: 6px;
+        line-height: 30px;
+        padding: 0;
+    }
+
     @media (${breakpoints.mobileLarge}) {
         max-width: 400px;
+        border-radius: 6px;
+        line-height: 30px;
         padding: 0;
     }
 

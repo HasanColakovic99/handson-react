@@ -8,7 +8,8 @@ const Section = ({
     buttonText,
     isHeadingVisible = true,
     isTestimonial = false,
-    children
+    children,
+    callback
 }) => {
     return (
         <SectionWrapper isTestimonial={isTestimonial}>
@@ -17,7 +18,7 @@ const Section = ({
                 {isHeadingVisible && 
                 <Heading>
                     {title && <Title>{title}</Title>}
-                    {buttonText && <Button isHeading={true} isOutline={true}>{buttonText}</Button>}    
+                    {buttonText && <Button click={callback} isHeading={true} isOutline={true}>{buttonText}</Button>}    
                 </Heading>}
                 {children}
             </SectionInner>

@@ -1,11 +1,22 @@
+import { useState } from 'react';
 import LogoImg from '../../assets/images/logo.svg';
 import Button from '../Button/Button';
-import {Header as HeaderWrapper, HeaderInner, LogoLink, LogoImg as LogoElement, Hamburger, Nav, HeaderNavLink, ButtonLink} from "./HeaderStyle";
+import NavBar from "../NavBar/NavBar";
+import {Header as HeaderWrapper, HeaderInner, LogoLink, LogoImg as LogoElement, Hamburger, ClosingHamburger, Nav, HeaderNavLink, ButtonLink} from "./HeaderStyle";
 
 const Header = ({
     isSecondary,
     isActive
 }) => {
+
+    const [hidden, setHiden] = useState(false);
+    const openNav = () => {
+        setHiden(!hidden);
+    }
+
+    const closeNav = () => {
+        setHiden(false);
+    }
 
     return (
         <HeaderWrapper isSecondary={isSecondary}>
@@ -13,7 +24,8 @@ const Header = ({
                 <LogoLink to="/">
                     <LogoElement src={LogoImg} alt="Logo"/>
                 </LogoLink>
-                <Hamburger />
+                {!hidden ? <Hamburger onClick={() => openNav()}/> : <ClosingHamburger onClick={() => closeNav()}/>}
+                {hidden && <NavBar></NavBar>}
                 <Nav>
                     <HeaderNavLink to="/courses" isActive={isActive}>Courses</HeaderNavLink>
                     <ButtonLink to="/">
