@@ -29,12 +29,22 @@ export const Main = styled.main`
 
 export const Form = styled(FormFormik)``;
 
+
+export const Label = styled.label`
+    font-family: ${fonts.primary};
+`;
+
+export const FormProfile = styled(FormFormik)`
+    width: 40%;
+`;
+
+export const FormPassword = styled(FormFormik)`
+    width: 95%;
+    margin-top: 10px;
+`;
+
 export const FormRow = styled.div`
     margin-bottom: 32px;
-
-    &:last-child(){
-        margin-bottom: 0;
-    }
 `;
 
 // DEFAULT STYLE KOJEG MOŽEMO DODATI U BILO KOJU STYLE KOMPONENTU
@@ -72,4 +82,41 @@ export const ErrorMessage = styled(ErrorMessageFormik)`
     font-size: 14px;
     color: ${colors.primary};
     padding-top: 8px;
+`;
+
+export const ProfileWrapper = styled.div`
+    display: flex;
+`;
+
+const Wrapper = css`
+    background-color: #f0f1f2;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 290px;
+    height: 100px;
+    margin-left: 40px;
+`;
+
+export const ToastWrapper = styled.div`
+    ${Wrapper}
+`;
+
+export const ResetPasswordWrapper = styled.div`
+    ${Wrapper};
+    width: 400px;
+    height: fit-content;
+`;
+
+export const Title = styled.div`
+    font-family: ${fonts.secondary};
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+`;
+
+export const Subtitle = styled.div`
+    font-family: ${fonts.primary};
+    font-size: 13px;
 `;

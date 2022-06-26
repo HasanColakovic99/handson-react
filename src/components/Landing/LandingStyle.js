@@ -50,19 +50,18 @@ export const Content = styled.div`
 
 export const ContentInner = styled.div`
     margin: 0 auto;
-
+    @media (max-width: 375px) {
+        width: 330px;
+    }
     @media (${breakpoints.tabletSmall}) {
         width: 450px;
     }
-
     @media (${breakpoints.tablet}) {
         width: 550px;
     }
-
     @media (${breakpoints.desktop}) {
         width: 960px;
     }
-
     @media (${breakpoints.desktopLarge}) {
         width: 1280px;
     }
@@ -73,7 +72,14 @@ export const Title = styled.h1`
     width: 550px;
     color: ${colors.bgPrimary};
     margin-bottom: 24px;
-
+    @media (max-width: 375px) {
+        width: 300px;
+        font-size: 40px;
+    }
+    @media (${breakpoints.mobileLarge}) {
+        width: 350px;
+        font-size: 45px;
+    }
     @media (${breakpoints.tabletSmall}) {
         width: 450px;
         font-size: 56px;
@@ -86,7 +92,12 @@ export const Subtitle = styled.p`
     color: ${colors.bgPrimary};
     width: 440px;
     margin-bottom: 48px;
-
+    @media (max-width: 375px) {
+        width: 330px;
+    }
+    @media (${breakpoints.mobileLarge}) {
+        width: 350px;
+    }
     @media (${breakpoints.tabletSmall}) {
         font-size: 16px;
     }

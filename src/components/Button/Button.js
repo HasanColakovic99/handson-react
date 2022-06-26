@@ -1,5 +1,4 @@
 import {Button as ButtonWrapper} from "./ButtonStyle";
-import {useNavigate} from "react-router-dom";
 
 const Button = ({
     click,

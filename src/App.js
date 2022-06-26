@@ -6,6 +6,7 @@ import ScrollToTop from './ScrollToTop';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from './pages/Register/Register';
 import LogIn from './pages/LogIn/LogIn';
+import Profile from './pages/Profile/Profile';
 
 function App() {
   return <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/courses" element={<Courses />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/sign-in" element={<LogIn />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
         <Route path="/course/:id" element={<Course />}></Route>
       </Routes>
     </Router>

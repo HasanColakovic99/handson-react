@@ -4,8 +4,7 @@ import Header from '../../components/Header/Header';
 import Landing from '../../components/Landing/Landing';
 import Section from '../../components/Section/Section';
 import Testimonial from '../../components/Testimonial/Testimonial';
-import Button from "../../components/Button/Button";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {Grid, Main} from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/mock/courses";
 import Loader from "../../components/Loader/Loader";
@@ -21,6 +20,11 @@ const Home = () => {
         }, 1000)
     }, []);
 
+    let navigate = useNavigate();
+    const coursesPage = () => {
+        navigate('courses');
+    }
+
     return (
         <>
             <Header />
@@ -29,7 +33,7 @@ const Home = () => {
                     <Landing />
                 </section>
 
-                <Section actionText={'Learn something new'} title={'Open new possibilites'} buttonText={<Link to="/courses"><Button isOutline={true}>More courses</Button></Link>}>
+                <Section actionText={'Learn something new'} title={'Open new possibilites'} buttonText={"More courses"} callback={coursesPage}>
                     {isLoading === true ? <Loader /> : (
                     <Grid>
                         {courses.map(
