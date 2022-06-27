@@ -6,7 +6,7 @@ import {Header as HeaderWrapper, HeaderInner, LogoLink, LogoImg as LogoElement, 
 
 const Header = ({
     isSecondary,
-    isActive,
+    coursesActive,
     profileActive
 }) => {
 
@@ -28,7 +28,7 @@ const Header = ({
                 {!hidden ? <Hamburger onClick={() => openNav()}/> : <ClosingHamburger onClick={() => closeNav()}/>}
                 {hidden && <NavBar></NavBar>}
                 <Nav>
-                    <HeaderNavLink to="/courses" isActive={isActive}>Courses</HeaderNavLink>
+                    <HeaderNavLink to="/courses" coursesActive={coursesActive}>Courses</HeaderNavLink>
                     <HeaderNavLink to="/profile" profileActive={profileActive}>Profile</HeaderNavLink>
                     <ButtonLink to="/sign-in">
                         <Button isNav={true}>Sign In</Button>

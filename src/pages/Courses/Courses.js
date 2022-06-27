@@ -29,7 +29,7 @@ const Courses = () => {
 
     return (
         <>
-            <Header isSecondary={true} isActive={true}/>
+            <Header isSecondary={true} coursesActive/>
             <Section title={'All courses'}>
             <SearchBar placeholder={"Search"} onChange={handleSearch} disabled={isDisabled} />
             {isLoading === true ? <Loader /> :                    

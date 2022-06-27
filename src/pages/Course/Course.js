@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import { Button } from "../../components/Button/ButtonStyle";
+import { useParams, useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";

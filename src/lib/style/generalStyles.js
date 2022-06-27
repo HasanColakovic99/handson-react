@@ -36,6 +36,10 @@ export const Label = styled.label`
 
 export const FormProfile = styled(FormFormik)`
     width: 40%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const FormPassword = styled(FormFormik)`
@@ -86,6 +90,11 @@ export const ErrorMessage = styled(ErrorMessageFormik)`
 
 export const ProfileWrapper = styled.div`
     display: flex;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const Wrapper = css`
@@ -101,12 +110,25 @@ const Wrapper = css`
 
 export const ToastWrapper = styled.div`
     ${Wrapper}
+
+    @media (max-width: 768px) {
+        margin-left: 0px;
+    }
 `;
 
 export const ResetPasswordWrapper = styled.div`
     ${Wrapper};
     width: 400px;
     height: fit-content;
+
+    @media (max-width: 768px) {
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+
+    @media (max-width: 463px) {
+        width: 85%;
+    }
 `;
 
 export const Title = styled.div`

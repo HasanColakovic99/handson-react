@@ -1,6 +1,6 @@
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
-import {Form, Field, FormRow, Select, Option, ErrorMessage} from "../../lib/style/generalStyles";
+import {Form, Field, FormRow, ErrorMessage} from "../../lib/style/generalStyles";
 import {Formik} from "formik";
 import * as Yup from "yup";
 import { Button } from "../../components/Button/ButtonStyle";
